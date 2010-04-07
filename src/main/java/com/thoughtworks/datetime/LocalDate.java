@@ -1,4 +1,4 @@
-package com.thoughtworks.util;
+package com.thoughtworks.datetime;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package com.thoughtworks.util;
+package com.thoughtworks.datetime;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,7 @@ import java.util.Calendar;
 import org.junit.After;
 import org.junit.Test;
 
-import com.thoughtworks.util.Date.Month;
+import com.thoughtworks.datetime.Date.Month;
 
 public class LocalDateTimeTest {
 

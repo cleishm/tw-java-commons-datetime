@@ -1,4 +1,4 @@
-package com.thoughtworks.util;
+package com.thoughtworks.datetime;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;

@@ -1,4 +1,4 @@
-package com.thoughtworks.util;
+package com.thoughtworks.datetime;
 
 import static junit.framework.Assert.*;
 

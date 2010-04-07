@@ -1,4 +1,4 @@
-package com.thoughtworks.util;
+package com.thoughtworks.datetime;
 
 public interface Time {
     int hourOfDay();
