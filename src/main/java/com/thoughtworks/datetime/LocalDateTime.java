@@ -10,7 +10,7 @@ import org.joda.time.Period;
 import org.joda.time.PeriodType;
 import org.joda.time.format.DateTimeFormat;
 
-public class LocalDateTime implements Date, Time {
+public class LocalDateTime implements Date, Time, Comparable<LocalDateTime> {
 	private static boolean isSystemDateTimeFixed = false;
 
 	private DateTime jodaDateTime;
@@ -179,6 +179,10 @@ public class LocalDateTime implements Date, Time {
 
 	public boolean isBetween(final Date start, final Date end) {
 		return isOnOrAfter(start) && isOnOrBefore(end);
+	}
+	
+	public int compareTo(final LocalDateTime dateTime) {
+		return jodaDateTime.compareTo(dateTime.jodaDateTime);
 	}
 
 	public boolean isInfinite() {

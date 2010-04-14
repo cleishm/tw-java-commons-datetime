@@ -1,6 +1,6 @@
 package com.thoughtworks.datetime;
 
-import static org.junit.Assert.*;
+import static junit.framework.Assert.*;
 
 import java.util.Calendar;
 
@@ -419,6 +419,21 @@ public class LocalDateTimeTest {
 		assertTrue(LocalDateTime.at(1985, 7, 13, 9, 29, 59).isBeforeNow());
 		assertTrue(LocalDateTime.at(1985, 7, 13, 9, 28, 0).isBeforeNow());
 		assertFalse(LocalDateTime.at(1985, 7, 13, 9, 30, 0).isBeforeNow());
+	}
+	
+	@Test
+	public void shouldCompareNegativeIfFirstDateIsEarlier() throws Exception {
+		assertTrue(LocalDateTime.at(1985, 7, 13, 9, 30, 0).compareTo(LocalDateTime.at(1985, 7, 13, 9, 29, 59)) > 0);
+	}
+
+	@Test
+	public void shouldComparePositiveIfFirstDateIsLater() throws Exception {
+		assertTrue(LocalDateTime.at(1985, 7, 13, 9, 29, 59).compareTo(LocalDateTime.at(1985, 7, 13, 9, 30, 0)) < 0);
+	}
+
+	@Test
+	public void shouldCompareZeroIfDatesAreEqual() throws Exception {
+		assertTrue(LocalDateTime.at(1985, 7, 13, 9, 29, 59).compareTo(LocalDateTime.at(1985, 7, 13, 9, 29, 59)) == 0);
 	}
 
 	@Test
